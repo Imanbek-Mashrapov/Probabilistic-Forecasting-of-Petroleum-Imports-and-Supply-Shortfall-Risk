@@ -1,0 +1,43 @@
+snapshot_id: "2026-11-02"      # raw responses are grouped per snapshot; bump it to take a new vintage
+
+comtrade:
+  base_url: https://comtradeapi.un.org
+  preview_path: /public/v1/preview/C/M/HS
+  data_path: /data/v1/get/C/M/HS
+  annual_path: /data/v1/get/C/A/HS
+  availability_path: /public/v1/getDA/C/M/HS
+  reference_path: /files/v1/app/reference
+  auth_header: Ocp-Apim-Subscription-Key   # verified 2026-11-02: fake key -> "invalid", other header -> "missing"
+  # Published tier limits (uncomtrade.org/docs/subscriptions, checked 2026-11-02)
+  keyed:  {record_cap: 100000, min_interval_s: 1.2, periods_per_call: 12, daily_calls: 500}
+  preview: {record_cap: 500, min_interval_s: 2.5, periods_per_call: 1}
+  max_retries: 6
+  backoff_base_s: 4
+  backoff_max_s: 300
+  timeout_s: 120
+  quota_wait_max_s: 3900       # keyless quota is hourly; wait it out up to this long, then stop cleanly
+
+window: {start: 201001, end: 202612}
+pilot_window: {start: 201101, end: 202612}
+
+flows:
+  pilot: "M,X,RM,RX"
+  panel_keyed: "M,X,RM,RX"
+  panel_preview: "M"
+
+screening:   # Tier rules, applied to the world-level audit over the common window below
+  window: {start: 201501, end: 202608}
+  tier1: {min_months: 120, min_mass_share: 0.95, max_gap_months: 6}
+  tier2: {min_months: 60, min_mass_share: 0.80}
+  min_series_tonnes_per_month: 100     # guards against trivial series that only have some records
+  min_panel_months: 84                 # seven years, as in the pilot
+  max_exports_to_imports: 0.5          # above this a reporter is a transit or export market, not import-dependent
+  max_blend_share: 0.2                 # above this 271019 alone misses road diesel filed under 271020
+
+quality:
+  # Plausible customs unit value at aggregate country-product-month level
+  unit_value_usd_per_t: {gasoline: [150, 4000], middle_heavy: [150, 6000], middle_incl_blends: [150, 6000], lpg: [100, 4000], crude: [80, 2500], biodiesel_blend: [100, 8000], waste_oil: [10, 8000], total_2710: [150, 6000]}
+  # Brent-deflated unit value relative to its centred 13-month median
+  uv_relative: {low: 0.5, high: 2.0, min_value_share_with_mass: 0.5}
+  robust_z_threshold: 4.0
+  partner_vs_world_tolerance: 0.05

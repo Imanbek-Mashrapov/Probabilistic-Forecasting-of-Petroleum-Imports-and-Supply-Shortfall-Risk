@@ -1,0 +1,44 @@
+iso3,name,comtrade_code,group,lldc,importer_type_provisional
+KGZ,Kyrgyzstan,417,focus,1,strict_importer
+AFG,Afghanistan,4,asia_central,1,strict_importer
+ARM,Armenia,51,caucasus,1,strict_importer
+AZE,Azerbaijan,31,caucasus,1,producer
+KAZ,Kazakhstan,398,asia_central,1,producer
+TJK,Tajikistan,762,asia_central,1,strict_importer
+TKM,Turkmenistan,795,asia_central,1,producer
+UZB,Uzbekistan,860,asia_central,1,producer
+MNG,Mongolia,496,asia_east,1,strict_importer
+BTN,Bhutan,64,asia_south,1,strict_importer
+NPL,Nepal,524,asia_south,1,strict_importer
+LAO,Lao PDR,418,asia_se,1,strict_importer
+BOL,Bolivia,68,south_america,1,producer
+PRY,Paraguay,600,south_america,1,strict_importer
+BWA,Botswana,72,africa,1,strict_importer
+BFA,Burkina Faso,854,africa,1,strict_importer
+BDI,Burundi,108,africa,1,strict_importer
+CAF,Central African Republic,140,africa,1,strict_importer
+TCD,Chad,148,africa,1,producer
+SWZ,Eswatini,748,africa,1,strict_importer
+ETH,Ethiopia,231,africa,1,strict_importer
+LSO,Lesotho,426,africa,1,strict_importer
+MWI,Malawi,454,africa,1,strict_importer
+MLI,Mali,466,africa,1,strict_importer
+NER,Niger,562,africa,1,producer
+RWA,Rwanda,646,africa,1,strict_importer
+SSD,South Sudan,728,africa,1,producer
+UGA,Uganda,800,africa,1,strict_importer
+ZMB,Zambia,894,africa,1,refiner
+ZWE,Zimbabwe,716,africa,1,strict_importer
+MDA,Moldova,498,europe,1,strict_importer
+MKD,North Macedonia,807,europe,1,strict_importer
+AND,Andorra,20,europe,0,strict_importer
+AUT,Austria,40,europe,0,refiner
+BLR,Belarus,112,europe,0,refiner
+CZE,Czechia,203,europe,0,refiner
+HUN,Hungary,348,europe,0,refiner
+LIE,Liechtenstein,438,europe,0,strict_importer
+LUX,Luxembourg,442,europe,0,strict_importer
+SMR,San Marino,674,europe,0,strict_importer
+SRB,Serbia,688,europe,0,refiner
+SVK,Slovakia,703,europe,0,refiner
+CHE,Switzerland,757,europe,0,refiner

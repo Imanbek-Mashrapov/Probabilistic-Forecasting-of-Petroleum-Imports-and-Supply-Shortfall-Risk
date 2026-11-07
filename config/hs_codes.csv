@@ -1,0 +1,12 @@
+hs_code,product_name,product_group,classification_versions,research_relevance,in_target
+2709,"Crude petroleum oils",crude,"H3|H4|H5|H6","Context only; never merged with refined products",0
+2710,"Petroleum oils, other than crude (heading total)",total_2710,"H3|H4|H5|H6","Reconciliation check against the six-digit lines",0
+271011,"Light oils and preparations (HS2007 code)",gasoline,"H3","Predecessor of 271012; merged into gasoline proxy",1
+271012,"Light petroleum oils and preparations, excl. biodiesel",gasoline,"H4|H5|H6","Primary target. Proxy for motor gasoline: also holds naphtha and gasoline blending components",1
+271019,"Other petroleum oils: medium and heavy oils and preparations",middle_heavy,"H3|H4|H5|H6","Secondary target. Mixes diesel/gas oil, kerosene, jet fuel, fuel oil and lubricants; never labelled diesel",1
+271020,"Petroleum oils containing biodiesel, excl. waste oils",biodiesel_blend,"H4|H5|H6","Descriptive; small in most reporters",0
+271091,"Waste oils containing PCBs/PCTs/PBBs",waste_oil,"H3|H4|H5|H6","Excluded from fuel supply",0
+271099,"Other waste oils",waste_oil,"H3|H4|H5|H6","Excluded from fuel supply",0
+271112,"Propane, liquefied",lpg,"H3|H4|H5|H6","LPG descriptive series",0
+271113,"Butanes, liquefied",lpg,"H3|H4|H5|H6","LPG descriptive series",0
+271119,"Other gaseous hydrocarbons, liquefied",lpg,"H3|H4|H5|H6","LPG descriptive series; may hold non-LPG gases",0
