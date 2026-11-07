@@ -1,0 +1,21 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.env.example
+logs/
+.ipynb_checkpoints/
+.pytest_cache/
+# Raw snapshots and derived data are regenerable; keep them out of Git unless you decide otherwise
+data/raw/un_comtrade/
+data/processed/
+data/analytical/
+data/raw/*
+!data/raw/energy_balance/
+!data/raw/official_kg/
+data/research/*.parquet
+deliverables/*.zip
+deliverables/*.pdf
+deliverables/**/*.pptx
+.claude/
+~$*
